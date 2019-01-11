@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-const IxRawan = new Discord.Client();
+const client = new Discord.Client();
 var prefix = "E&";
 
 
 
 
 
-IxRawan.on('ready', () => {
+client.on('ready', () => {
    console.log('Bot Is Online');
-IxRawan.user.setStatus("Online")
+client.user.setStatus("Online")
 });
 
 
@@ -54,8 +54,8 @@ const cuttweet = [
      '‏كت تويت|- هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',
 ]
 
-IxRawan.on('message', message => {
-  if (message.content === prefix + `cuttweet`) {
+client.on('message', message => {
+  if (message.content === prefix + `كت تويت`) {
 message.channel.sendMessage({embed: {
   color: 3547003,
   description: `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`
@@ -72,8 +72,8 @@ message.channel.sendMessage({embed: {
 
 
 
-IxRawan.on('message', msg => {
-    if (msg.content == prefix + "speed") {
+client.on('message', msg => {
+    if (msg.content == prefix + "اسرع") {
         var x = ["Azoz",
 "DeathGames",
 "زيرو كنج",
@@ -176,8 +176,8 @@ IxRawan.on('message', msg => {
     }
 })
 
-IxRawan.on('message', puz => {
-    if (puz.content == prefix + "puzzle") {
+client.on('message', puz => {
+    if (puz.content == prefix + "لغز") {
         var x = ["ما هي حاسة الشم عند الثعبان ؟",
 "ما هو الشي الذي يكسو الناس و هو عار بدون ملابس ؟",
 "ما هو الشي الذي لا يجري و لا يمشي ؟",
@@ -227,8 +227,8 @@ IxRawan.on('message', puz => {
     }
 })
 
-IxRawan.on('message', fkk => {
-    if (fkk.content == prefix + "dismantling") {
+client.on('message', fkk => {
+    if (fkk.content == prefix + "فكك") {
         var x = ["المتاح للجميع لا يتاح لي",
 "خعاخع",
 "فيلا",
@@ -279,13 +279,13 @@ IxRawan.on('message', fkk => {
 })
 
 
-IxRawan.on('ready', () => {
+client.on('ready', () => {
    console.log(`----------------`);
       console.log(` Bot By IxRawan_`);
         console.log(`----------------`);
-      console.log(`ON ${IxRawan.guilds.size} Servers `);
+      console.log(`ON ${client.guilds.size} Servers `);
     console.log(`----------------`);
-  console.log(`Logged in as ${IxRawan.user.tag}!`);
+  console.log(`Logged in as ${client.user.tag}!`);
 IxRawan.user.setGame(`E&help|E&Invite`,"http://twitch.tv/IDK")
 IxRawan.user.setStatus("Online")
 });
@@ -295,7 +295,7 @@ IxRawan.user.setStatus("Online")
 
 
 
-IxRawan.on('message', msg => {
+client.on('message', msg => {
 	if(msg.content === prefix + "invite") {
 		msg.author.send(`
 **Bot By IxRawan_**
@@ -310,7 +310,7 @@ Link: https://discordapp.com/api/oauth2/authorize?client_id=533345455019393034&p
 	}
 });
 
-IxRawan.on('message', message => {
+client.on('message', message => {
 	if(message.content === "E&invite") {
 		message.author.send(`
 		شكرأ لاستخدامك لبوتنا
@@ -323,17 +323,17 @@ IxRawan.on('message', message => {
 
 
 
-        IxRawan.on('message', message => {
+        client.on('message', message => {
             if (message.content === prefix + "help") {
             let embed = new Discord.RichEmbed()
        .setThumbnail(message.author.avatarURL)
        .addField('     **Bot Created By** `IxRawan`', 'IxRawan ID: 516307527806484490')
-       .addField('     **E&cuttweet** ' ,' ``لعبة كت تويت`` ')
-       .addField('     **E&sra7a**  ' ,' ``البوت يسئلك اسئلة لازم تجاوب بصراحة`` ')
-       .addField('     **E&puzzle**  ' ,' ``البوت يجيبلك الغاز لازم تعرفها`` ')
-       .addField('     **E&speed **  ' ,' ``البوت رح يعطيكم كلمة والاسرع رح يكتبها`` ')
-	   .addField('     **E&dismantling**' ,' ``لعبة فكك`` ')
-	    .addField('    **E&punishment**' ,' ``البوت يعطيك عقاب``)
+       .addField('     **E&كت تويت** ' ,' ``لعبة كت تويت`` ')
+       .addField('     **E&صراحة**  ' ,' ``البوت يسئلك اسئلة لازم تجاوب بصراحة`` ')
+       .addField('     **E&لغز**  ' ,' ``البوت يجيبلك الغاز لازم تعرفها`` ')
+       .addField('     **E&اسرع **  ' ,' ``البوت رح يعطيكم كلمة والاسرع رح يكتبها`` ')
+	   .addField('     **E&فكك**' ,' ``لعبة فكك`` ')
+	    .addField('    **E&عقاب**' ,' ``البوت يعطيك عقاب``)
        .setColor('RANDOM')
          message.author.sendEmbed(embed);
            }
@@ -403,17 +403,17 @@ const Sra7a = [
      '‏صراحه  |  ما اكثر شي ندمن عليه؟',
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
-   IxRawan.on('message', message => {
- if (message.content.startsWith(prefix + "sra7a")) {
+   client.on('message', message => {
+ if (message.content.startsWith(prefix + "صراحة")) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
-  var IxRawan= new Discord.RichEmbed()
+  var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
   .setColor('RANDOM')
   .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
   .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
                   .setTimestamp()
 
-   message.channel.sendEmbed(IxRawan);
+   message.channel.sendEmbed(client);
    message.react("??")
  }
 });
@@ -480,7 +480,7 @@ const Za7f = [
   
 ]
 
- IxRawan.on('message', message => {
+ client.on('message', message => {
    if (message.content.startsWith(prefix + "عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
@@ -503,4 +503,4 @@ const Za7f = [
 
 
 
-IxRawan.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);

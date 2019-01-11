@@ -1,9 +1,80 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
-var prefix = "#";
-client.on('message', message => {
-    if (message.content == "#سرعه") {
-        var x = ["DreamKing",
+const IxRawan = new Discord.Client();
+var prefix = "E#";
+
+
+
+
+
+IxRawan.on('ready', () => {
+   console.log('Bot Is Online');
+IxRawan.user.setStatus("Online")
+});
+
+
+
+
+
+
+
+
+
+
+
+const cuttweet = [
+     'كت تويت ‏- تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
+     'كت تويت ‏- أكثر شيء يُسكِت الطفل برأيك؟',
+     'كت تويت ‏- الحرية لـ ... ؟',
+     'كت تويت ‏- قناة الكرتون المفضلة في طفولتك؟',
+     'كت تويت ‏- كلمة للصُداع؟',
+     'كت تويت ‏- ما الشيء الذي يُفارقك؟',
+     'كت تويت ‏- ما الشيء الذي يُفارقك؟',
+     'كت تويت ‏- موقف مميز فعلته مع شخص ولا يزال يذكره لك؟',
+     'كت تويت ‏- أيهما ينتصر، الكبرياء أم الحب؟',
+     'كت تويت| بعد ١٠ سنين ايش بتكون ؟',
+
+     'كت تويت ‏- مِن أغرب وأجمل الأسماء التي مرت عليك؟',
+     '‏كت تويت| عمرك شلت مصيبة عن شخص برغبتك ؟',
+'كت تويت ‏- أكثر سؤال وجِّه إليك مؤخرًا؟',
+     '‏كت تويت|ما هو الشيء الذي يجعلك تشعر بالخوف؟',
+     '‏كت تويت|وش يفسد الصداقة؟',
+     '‏كت تويت|شخص لاترفض له طلبا ؟',
+     '‏كت تويت|كم مره خسرت شخص تحبه؟.',
+     '‏كت تويت|كيف تتعامل مع الاشخاص السلبيين ؟',
+     '‏كت تويت|كلمة تشعر بالخجل اذا قيلت لك؟',
+     '‏كت تويت|هل تُخفي نجاحك أو كت كت تويت | هل تخفي نجاحك أو أشيائك الجميلة خوفاً من العين والحسد؟',
+     '‏كت تويت|جسمك اكبر من عٌمرك او العكسّ ؟!',
+     '‏كت تويت|أقوى كذبة مشت عليك ؟',
+     '‏كت تويت|تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',
+     'كت تويت|هل حدث وضحيت من أجل شخصٍ أحببت؟',
+     '‏كت تويت|أكثر تطبيق تستخدمه مؤخرًا؟',
+     '‏كت تويت|‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',
+     '‏كت تويت|وش محتاج عشان تكون مبسوط ؟',
+     '‏كت تويت|مطلبك الوحيد الحين ؟',
+     '‏كت تويت|- هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',
+]
+
+IxRawan.on('message', message => {
+  if (message.content === prefix + `cuttweet`) {
+message.channel.sendMessage({embed: {
+  color: 3547003,
+  description: `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`
+}});
+};
+});
+
+
+
+
+
+
+
+
+
+
+IxRawan.on('message', msg => {
+    if (msg.content == prefix + "speed") {
+        var x = ["Azoz",
 "DeathGames",
 "زيرو كنج",
 "أرض الأحلام",
@@ -41,7 +112,7 @@ client.on('message', message => {
 "Google",
 "Viber",
 ];
-        var x2 = ['DreamKing',
+        var x2 = ['IxRawan',
         "DeathGames",
         "زيرو كنج",
         "أرض الأحلام",
@@ -99,14 +170,14 @@ client.on('message', message => {
         })
         
         r.then((collected)=> {
-            message.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
+            message.channel.send(`${collected.first().author} صح عليك ياوحش كتبت الكلمة قبل لا يخلص الوقت  `);
         })
         })
     }
 })
 
-client.on('message', puz => {
-    if (puz.content == "#لغز") {
+IxRawan.on('message', puz => {
+    if (puz.content == prefix + "puzzle") {
         var x = ["ما هي حاسة الشم عند الثعبان ؟",
 "ما هو الشي الذي يكسو الناس و هو عار بدون ملابس ؟",
 "ما هو الشي الذي لا يجري و لا يمشي ؟",
@@ -150,14 +221,14 @@ client.on('message', puz => {
         })
         
         r.then((collected)=> {
-            puz.channel.send(`${collected.first().author} لقد قمت بحل اللغز في الوقت المناسب  `);
+            puz.channel.send(`${collected.first().author} صح عليك ياوحش كتبت الكلمة قبل لا يخلص الوقت  `);
         })
         })
     }
 })
 
-client.on('message', fkk => {
-    if (fkk.content == "#فكك") {
+IxRawan.on('message', fkk => {
+    if (fkk.content == prefix + "dismantling") {
         var x = ["المتاح للجميع لا يتاح لي",
 "خعاخع",
 "فيلا",
@@ -201,24 +272,65 @@ client.on('message', fkk => {
         })
         
         r.then((collected)=> {
-            fkk.channel.send(`${collected.first().author} لقد قمت بفكيك الجملة في الوقت المناسب`);
+            fkk.channel.send(`${collected.first().author} صح عليك ياوحش كتبت الكلمة قبل لا يخلص الوقت `);
         })
         })
     }
 })
 
 
-client.on('ready', () => {
+IxRawan.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Cyhper Script By : DREAM`);
+      console.log(` Bot By IxRawan_`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : DREAM ' `);
+      console.log(`ON ${IxRawan.guilds.size} Servers `);
     console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Light Games`,"http://twitch.tv/Light")
-client.user.setStatus("dnd")
+  console.log(`Logged in as ${IxRawan.user.tag}!`);
+IxRawan.user.setGame(`E#help|E#Invite`,"http://twitch.tv/IDK")
+IxRawan.user.setStatus("Online")
 });
 
 
 
-client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
+
+
+
+IxRawan.on('message', msg => {
+	if(msg.content === prefix + "invite") {
+		msg.author.send(`
+**Bot By IxRawan_**
+**IxRawan_ ID: 516307527806484490**
+
+**شكرأ لك لأضافة البوت الى سيرفرك**
+Link: https://discordapp.com/api/oauth2/authorize?client_id=533345455019393034&permissions=8&scope=bot
+:heart:
+:kissing_heart:
+`);
+
+	}
+});
+
+
+
+
+
+
+        IxRawan.on('message', message => {
+            if (message.content === prefix + "help") {
+            let embed = new Discord.RichEmbed()
+       .setThumbnail(message.author.avatarURL)
+       .addField('     **Bot Created By** `IxRawan`', 'IxRawan ID: 516307527806484490')
+       .addField('     **E#cuttweet** ' ,' ``لعبة كت تويت`` ')
+       .addField('     **E#sra7a**  ' ,' ``البوت يسئلك اسئلة لازم تجاوب بصراحة`` ')
+       .addField('     **E#puzzle**  ' ,' ``البوت يجيبلك الغاز لازم تعرفها`` ')
+       .addField('     **E#speed **  ' ,' ``البوت رح يعطيكم كلمة والاسرع رح يكتبها`` ')
+	   .addField('     **E#dismantling**' ,' ``لعبة فكك`` ')
+       .setColor('RANDOM')
+         message.author.sendEmbed(embed);
+           }
+       });
+
+
+
+
+IxRawan.login(process.env.BOT_TOKEN);

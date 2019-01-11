@@ -403,21 +403,20 @@ const Sra7a = [
      '‏صراحه  |  ما اكثر شي ندمن عليه؟',
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
-   client.on('message', message => {
+   IxRawan.on('message', message => {
  if (message.content.startsWith(prefix + "sra7a")) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
-  var client= new Discord.RichEmbed()
+  var IxRawan= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
   .setColor('RANDOM')
   .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
   .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
                   .setTimestamp()
 
-   message.channel.sendEmbed(client);
+   message.channel.sendEmbed(IxRawan);
    message.react("??")
  }
 });
-
 
 
 
@@ -481,7 +480,7 @@ const Za7f = [
   
 ]
 
- client.on('message', message => {
+ IxRawan.on('message', message => {
    if (message.content.startsWith(prefix + "عقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()

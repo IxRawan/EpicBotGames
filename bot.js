@@ -75,7 +75,6 @@ message.channel.sendMessage({embed: {
 IxRawan.on('message', msg => {
     if (msg.content == prefix + "speed") {
         var x = ["Azoz",
-"DeathGames",
 "زيرو كنج",
 "أرض الأحلام",
 "ألبرازيل",
@@ -105,15 +104,18 @@ IxRawan.on('message', msg => {
 "FaceBooK",
 "YouTube",
 "Infinity",
-"احبك دريم",
 "Don't Let Me Down",
 "Space",
 "Instgram",
 "Google",
 "Viber",
+"IxRawan_",
+"الحمدالله على كل حال",
+"الله واكبر",
+"EpicBot EpicBo-tGames EpicBot-Music",
+"EpicBot",
 ];
         var x2 = ['IxRawan',
-        "DeathGames",
         "زيرو كنج",
         "أرض الأحلام",
 		"ألبرازيل",
@@ -143,12 +145,17 @@ IxRawan.on('message', msg => {
         "FaceBooK",
         "YouTube",
         "Infinity",
-        "احبك دريم",
         "Don't Let Me Down",
 		"Space",
 		"Instgram",
 		"Google",
 		"Viber",
+		  "IxRawan_",
+		  "الحمدالله على كل حال",
+		  "الله واكبر",
+		  "EpicBot EpicBo-tGames EpicBot-Music",
+		  "EpicBot",
+		  
 		
         
         
@@ -240,6 +247,9 @@ IxRawan.on('message', fkk => {
 "مات",
 "شعبان شبعان",
 "ألعراق",
+"IxRawan",
+"EpicBotGames",
+"EpicBot",
 ];
         var x2 = ['ا ل م ت ا ح ل ل ج م ي ع ل ا ي ت ا ح ل ى',
 		"خ ع ا خ ع",
@@ -252,6 +262,10 @@ IxRawan.on('message', fkk => {
 		"م ا ت",
 		"ش ع ب ا ن ش ب ع ا ن",
 		"أ ل ع ر ا ق",
+		"I x R a w a n",
+		"E p i c B o t G a m e s",
+		"E p i c B o t",
+
         
         
         
@@ -320,11 +334,12 @@ Link: https://discordapp.com/api/oauth2/authorize?client_id=533345455019393034&p
             let embed = new Discord.RichEmbed()
        .setThumbnail(message.author.avatarURL)
        .addField('     **Bot Created By** `IxRawan`', 'IxRawan ID: 516307527806484490')
-       .addField('     **E#cuttweet** ' ,' ``لعبة كت تويت`` ')
-       .addField('     **E#sra7a**  ' ,' ``البوت يسئلك اسئلة لازم تجاوب بصراحة`` ')
-       .addField('     **E#puzzle**  ' ,' ``البوت يجيبلك الغاز لازم تعرفها`` ')
-       .addField('     **E#speed **  ' ,' ``البوت رح يعطيكم كلمة والاسرع رح يكتبها`` ')
-	   .addField('     **E#dismantling**' ,' ``لعبة فكك`` ')
+       .addField('     **E&cuttweet** ' ,' ``لعبة كت تويت`` ')
+       .addField('     **E&sra7a**  ' ,' ``البوت يسئلك اسئلة لازم تجاوب بصراحة`` ')
+       .addField('     **E&puzzle**  ' ,' ``البوت يجيبلك الغاز لازم تعرفها`` ')
+       .addField('     **E&speed **  ' ,' ``البوت رح يعطيكم كلمة والاسرع رح يكتبها`` ')
+	   .addField('     **E&dismantling**' ,' ``لعبة فكك`` ')
+	    .addFiel('     **E&invite' ,'``يبعتلك رابط الدعوة تبع البوت``)
        .setColor('RANDOM')
          message.author.sendEmbed(embed);
            }

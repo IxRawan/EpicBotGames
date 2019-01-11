@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const IxRawan = new Discord.Client();
-var prefix = "E#";
+var prefix = "E&";
 
 
 
@@ -286,7 +286,7 @@ IxRawan.on('ready', () => {
       console.log(`ON ${IxRawan.guilds.size} Servers `);
     console.log(`----------------`);
   console.log(`Logged in as ${IxRawan.user.tag}!`);
-IxRawan.user.setGame(`E#help|E#Invite`,"http://twitch.tv/IDK")
+IxRawan.user.setGame(`E&help|E&Invite`,"http://twitch.tv/IDK")
 IxRawan.user.setStatus("Online")
 });
 
